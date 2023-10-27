@@ -9,7 +9,9 @@ const port = 3000;
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
-mongoose.connect("mongodb://127.0.0.1:27017/todolistDB", { useNewUrlParser: true });
+const atlasConnectionString = "mongodb+srv://clusterzero.jvgkprk.mongodb.net/?authSource=%24external&authMechanism=MONGODB-X509&retryWrites=true&w=majority";
+
+mongoose.connect(atlasConnectionString, { useNewUrlParser: true });
 
 const itemschema =  {
     name: String,
