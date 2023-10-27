@@ -9,7 +9,7 @@ const port = 3000;
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
-const atlasConnectionString = "mongodb+srv://clusterzero.jvgkprk.mongodb.net/?authSource=%24external&authMechanism=MONGODB-X509&retryWrites=true&w=majority";
+const atlasConnectionString = "mongodb+srv://ZZ:ZZ1ZZ@clusterzero.jvgkprk.mongodb.net/?retryWrites=true&w=majority";
 
 mongoose.connect(atlasConnectionString, { useNewUrlParser: true });
 
